@@ -97,6 +97,7 @@ class ParametricFunctionVIew: UIView {
     override func draw(_ rect: CGRect) {
         drawAxis()
         drawTrajectory()
+        drawPOI()
     }
     
     private func drawAxis(){
@@ -158,6 +159,19 @@ class ParametricFunctionVIew: UIView {
         path.lineWidth = CGFloat(lineWidth)
         UIColor.red.setStroke()
         path.stroke()
+    }
+    
+    private func drawPOI(){
+        let poi = dataSource.pointsOfInterestFor(self)
+        
+        for p in poi {
+            let x = scalingX(p.x)
+            let y = scalingY(p.y)
+            let path = UIBezierPath(ovalIn: CGRect(x: x-4, y: y-4, width: 8, height: 8))
+            UIColor.blue.set()
+            path.stroke()
+            path.fill() // para rellenar /colorear el punto
+        }
     }
     
     private func scalingX(_ scaleInX: Double) -> Double {

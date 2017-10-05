@@ -176,37 +176,37 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource {
         }
     }
     //Funcion que muestras los puntos de interes dados unos parametros
-    func pointsOfInterestFor (_ pfv: ParametricFunctionVIew) -> FunctionPoint{
-        switch pfv {
+    func pointsOfInterestFor(_ pfgv: ParametricFunctionVIew) -> [FunctionPoint] {
+        switch pfgv {
         case outSpeedTimefucView:
             if(trajectoryTime >= tankModel.timeToEmpty){
-                return FunctionPoint(x: tankModel.timeToEmpty, y: 0)
+                return [FunctionPoint(x: tankModel.timeToEmpty, y: 0)]
             }else{
                 let h = tankModel.waterHeightAt(time: trajectoryTime)
                 let v = tankModel.waterOutputSpeed(waterHeight: h)
                 //vtLabel.text = String(floor(10000*v)/10000) + " m/seg"
-                return FunctionPoint(x: trajectoryTime, y: v)
+                return [FunctionPoint(x: trajectoryTime, y: v)]
             }
         case outSpeedHeightFuncView:
             if (trajectoryTime >= tankModel.timeToEmpty){
-                return FunctionPoint(x: tankModel.timeToEmpty, y: 0)
+                return [FunctionPoint(x: tankModel.timeToEmpty, y: 0)]
             }else {
                 let h = tankModel.waterHeightAt(time: trajectoryTime)
                 let v = tankModel.waterOutputSpeed(waterHeight: h)
-                return FunctionPoint(x: h, y: v)
+                return [FunctionPoint(x: h, y: v)]
             }
         case waterHeightTimeFuncView:
             if (trajectoryTime >= tankModel.timeToEmpty){
-                return FunctionPoint(x: tankModel.timeToEmpty, y: 0)
+                return [FunctionPoint(x: tankModel.timeToEmpty, y: 0)]
             }else {
                 let h = tankModel.waterHeightAt(time: trajectoryTime)
                 //  htLabel.text = String(floor(10000*h)/10000) + " m"
-                return FunctionPoint(x: trajectoryTime, y: h)
+                return [FunctionPoint(x: trajectoryTime, y: h)]
             }
         case trajectoryFuncView:
-            return FunctionPoint(x: trajectoryModel.originPos.x, y: trajectoryModel.originPos.y)
+            return [FunctionPoint(x: trajectoryModel.originPos.x, y: trajectoryModel.originPos.y)]
         default:
-            return FunctionPoint(x: 0.0, y: 0.0)
+            return [FunctionPoint(x: 0.0, y: 0.0)]
         }
     }
 
