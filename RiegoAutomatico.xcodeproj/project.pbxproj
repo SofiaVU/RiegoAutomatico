@@ -13,6 +13,8 @@
 		924CB26A1F7FA62200E04AE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924CB2691F7FA62200E04AE0 /* Assets.xcassets */; };
 		924CB26D1F7FA62200E04AE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924CB26B1F7FA62200E04AE0 /* LaunchScreen.storyboard */; };
 		924CB2751F7FA74100E04AE0 /* ParametricFunctionVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924CB2741F7FA74100E04AE0 /* ParametricFunctionVIew.swift */; };
+		928E250B1F8014F00062C1FA /* TankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928E250A1F8014F00062C1FA /* TankModel.swift */; };
+		928E250D1F80151A0062C1FA /* TrajectoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928E250C1F80151A0062C1FA /* TrajectoryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		924CB26C1F7FA62200E04AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		924CB26E1F7FA62200E04AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		924CB2741F7FA74100E04AE0 /* ParametricFunctionVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametricFunctionVIew.swift; sourceTree = "<group>"; };
+		928E250A1F8014F00062C1FA /* TankModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankModel.swift; sourceTree = "<group>"; };
+		928E250C1F80151A0062C1FA /* TrajectoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrajectoryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		924CB2561F7FA62200E04AE0 = {
 			isa = PBXGroup;
 			children = (
+				928E25091F8014580062C1FA /* Models */,
 				924CB2611F7FA62200E04AE0 /* RiegoAutomatico */,
 				924CB2601F7FA62200E04AE0 /* Products */,
 			);
@@ -65,6 +70,15 @@
 				924CB26E1F7FA62200E04AE0 /* Info.plist */,
 			);
 			path = RiegoAutomatico;
+			sourceTree = "<group>";
+		};
+		928E25091F8014580062C1FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				928E250A1F8014F00062C1FA /* TankModel.swift */,
+				928E250C1F80151A0062C1FA /* TrajectoryModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +153,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				928E250D1F80151A0062C1FA /* TrajectoryModel.swift in Sources */,
 				924CB2751F7FA74100E04AE0 /* ParametricFunctionVIew.swift in Sources */,
+				928E250B1F8014F00062C1FA /* TankModel.swift in Sources */,
 				924CB2651F7FA62200E04AE0 /* ViewController.swift in Sources */,
 				924CB2631F7FA62200E04AE0 /* AppDelegate.swift in Sources */,
 			);
